@@ -21,7 +21,7 @@
 <style lang="css" scoped>
     .sidebar-container {
         width: 25vw;
-        height: 100vh;
+        height: 100%;
         left: 0px;
         top: 0px;
         background: #DDDDFF;
@@ -31,6 +31,7 @@
         align-items: center;
         padding-top: 56px;
         overflow-y: hidden;
+        position: fixed;
     }
     a {
         text-decoration: none;

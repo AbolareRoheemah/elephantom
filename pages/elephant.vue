@@ -40,5 +40,8 @@
     h2 {
         margin-right: 1vw;
     }
+    span {
+        margin-top: 1vh;
+    }
     
 </style>
