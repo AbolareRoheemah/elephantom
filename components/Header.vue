@@ -16,9 +16,9 @@
         height: 13vh;
         background: #FFFFFF;
         box-shadow: 0px -7px 24px rgba(0, 0, 0, 0.25);
-        padding: auto 2vw;
+        /* padding: auto 2vw; */
         display: flex;
         align-items: center;
-        padding-left: 3vw;
+        padding-left: 4vw;
     }
 </style>
