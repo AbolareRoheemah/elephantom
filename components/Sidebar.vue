@@ -30,6 +30,7 @@
         flex-direction: column;
         align-items: center;
         padding-top: 56px;
+        overflow-y: hidden;
     }
     a {
         text-decoration: none;

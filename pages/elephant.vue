@@ -23,7 +23,9 @@
         overflow-x: hidden
     }
     .heading {
-        margin: 5vh
+        margin: 5vh;
+        display: flex;
+        flex-direction: row;
     }
     .text-body {
         font-family: Overpass;
