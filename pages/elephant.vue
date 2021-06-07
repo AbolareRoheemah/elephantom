@@ -19,7 +19,7 @@
     .elephant-container {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         overflow-x: hidden
     }
     .heading {

@@ -28,7 +28,7 @@
 .side-bar {
   flex-basis: 25%;
   overflow: hidden;
-  position: fixed;
+  /* position: fixed; */
 }
 .header{
   flex-basis: 74%;
