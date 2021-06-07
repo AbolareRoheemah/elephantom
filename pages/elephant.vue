@@ -26,7 +26,7 @@
         margin: 5vh;
         display: flex;
         flex-direction: row;
-        justify-content: space-between
+        justify-content: flex-start
     }
     .text-body {
         font-family: Overpass;
@@ -36,6 +36,9 @@
         line-height: 37px;
         margin-top: 2vh;
         color: #30425A;
+    }
+    h2 {
+        margin-right: 1vw;
     }
     
 </style>
