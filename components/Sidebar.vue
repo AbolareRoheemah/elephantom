@@ -21,7 +21,7 @@
 <style lang="css" scoped>
     .sidebar-container {
         width: 25vw;
-        height: 100%;
+        height: 100vh;
         left: 0px;
         top: 0px;
         background: #DDDDFF;

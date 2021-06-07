@@ -26,6 +26,7 @@
         margin: 5vh;
         display: flex;
         flex-direction: row;
+        justify-content: space-between
     }
     .text-body {
         font-family: Overpass;
