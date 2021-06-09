@@ -12,13 +12,13 @@
             </tr>
             </thead>
             <tbody>
-              <tr v-for="(el, index) in dataObjects"
+              <tr v-for="(el, index) in elephants"
             :key="index">
                 <td class="user-id">
                     {{ index }}
                     </td>
                 <td>{{ el.name }}</td>
-                <td>{{ el.specie }}</td>
+                <td>{{ el.species }}</td>
                 <td>{{ el.sex }} </td>
                 <td>{{ el.affiliation }}</td>
                 <td>{{ el.dob }}</td>
@@ -34,65 +34,22 @@
     data() {
       return {
       tableHead: ['S/N', 'Name', 'Species', 'Sex', 'Affliation', 'Dob'],
-      dataObjects: [
-      {
-        name: 'Name',
-        specie: 'Species',
-        sex: 'Sex',
-        affiliation: 'Affiliation',
-        dob: 'Dob'
-      },
-      {
-        name: 'Name',
-        specie: 'Species',
-        sex: 'Sex',
-        affiliation: 'Affiliation',
-        dob: 'Dob'
-      },
-      {
-        name: 'Name',
-        specie: 'Species',
-        sex: 'Sex',
-        affiliation: 'Affiliation',
-        dob: 'Dob'
-      },
-      {
-        name: 'Name',
-        specie: 'Species',
-        sex: 'Sex',
-        affiliation: 'Affiliation',
-        dob: 'Dob'
-      },
-      {
-        name: 'Name',
-        specie: 'Species',
-        sex: 'Sex',
-        affiliation: 'Affiliation',
-        dob: 'Dob'
-      },
-      {
-        name: 'Name',
-        specie: 'Species',
-        sex: 'Sex',
-        affiliation: 'Affiliation',
-        dob: 'Dob'
-      },
-      {
-        name: 'Name',
-        specie: 'Species',
-        sex: 'Sex',
-        affiliation: 'Affiliation',
-        dob: 'Dob'
-      },
-      {
-        name: 'Name',
-        specie: 'Species',
-        sex: 'Sex',
-        affiliation: 'Affiliation',
-        dob: 'Dob'
+      elephants: ''
       }
-    ]
+    },
+    methods: {
+      getElephants() {
+      let baseUrl = 'https://elephantapimary3.herokuapp.com'
+      fetch(baseUrl + '/elephants')
+      .then(res => res.json())
+      .then((data) => {
+        this.elephants = data.elephants
+      })
+        return this.elephants 
       }
+    },
+    created () {
+      this.getElephants()
     },
   }
 </script>

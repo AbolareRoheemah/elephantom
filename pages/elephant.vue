@@ -3,15 +3,39 @@
         <div class="image-div">
             <img src="~assets/images/elephantPic.png" alt="elephant">
         </div>
-        <div class="heading"><h2>Tuffi</h2><span>Female</span></div>
+        <div class="heading"><h2>{{ elephantName }}</h2><span>{{ elephantSex }}</span></div>
         <hr>
-        <p class="text-body">A female circus elephant that became famous in Germany during 1950 when she accidentally fell into the River Wupper, and survived.</p>
+        <p class="text-body">{{ note }}</p>
     </div>
 </template>
 
 <script>
     export default {
-        
+        data() {
+            return {
+                elephantName: '',
+                elephantSex: '',
+                note: ''
+            }
+        },
+        methods: {
+            getElephants() {
+            let baseUrl = 'https://elephantapimary3.herokuapp.com'
+            let id = '60be181912dbfd04f476ac76'
+            fetch(baseUrl + '/elephants/id/' + id)
+            .then(res => res.json())
+            .then((data) => {
+                let name = data.elephant.name
+                this.elephantName = name.charAt(0).toUpperCase() + name.slice(1)
+                this.elephantSex = data.elephant.sex
+                this.note = data.elephant.note
+            })
+                //  return this.elephants
+            }
+        },
+        created () {
+        this.getElephants()
+        },
     }
 </script>
 
