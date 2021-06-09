@@ -11,9 +11,9 @@
                 >{{th }}</th>
             </tr>
             </thead>
-            <tbody>
-              <tr v-for="(el, index) in elephants"
+            <tbody v-for="(el, index) in elephants"
             :key="index">
+              <NuxtLink :to="{ name: 'elephants-elephant', params: { elephant: el._id }}"><tr>
                 <td class="user-id">
                     {{ index }}
                     </td>
@@ -22,7 +22,7 @@
                 <td>{{ el.sex }} </td>
                 <td>{{ el.affiliation }}</td>
                 <td>{{ el.dob }}</td>
-            </tr>
+            </tr></NuxtLink>
             </tbody>
         </table>
     </div>
@@ -34,7 +34,8 @@
     data() {
       return {
       tableHead: ['S/N', 'Name', 'Species', 'Sex', 'Affliation', 'Dob'],
-      elephants: ''
+      elephants: '',
+      id: 'dood'
       }
     },
     methods: {
@@ -46,7 +47,7 @@
         this.elephants = data.elephants
       })
         return this.elephants 
-      }
+      },
     },
     created () {
       this.getElephants()
@@ -75,7 +76,9 @@ tr{
     align-items: center;
     padding: 10px;
 }
-
+a {
+  text-decoration: none;
+}
 /* td:last-child{
     border-radius: 0 0 5px 5px;
 } */

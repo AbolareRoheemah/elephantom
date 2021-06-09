@@ -6,7 +6,7 @@
         <div class="link-div">
             <div class="links">
                 <NuxtLink to="/"><p class="link-tags">Home</p></NuxtLink>
-                <NuxtLink to="/elephant"><p class="link-tags">Elephant</p></NuxtLink>
+                <NuxtLink :to="{ name: 'elephants-elephant' }"><p class="link-tags">Elephant</p></NuxtLink>
             </div>
         </div>
     </div>

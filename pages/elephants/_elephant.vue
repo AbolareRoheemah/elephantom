@@ -15,13 +15,14 @@
             return {
                 elephantName: '',
                 elephantSex: '',
-                note: ''
+                note: '',
             }
         },
+        props: ['elephant'],
         methods: {
             getElephants() {
             let baseUrl = 'https://elephantapimary3.herokuapp.com'
-            let id = '60be181912dbfd04f476ac76'
+            let id = this.elephant
             fetch(baseUrl + '/elephants/id/' + id)
             .then(res => res.json())
             .then((data) => {
@@ -30,7 +31,6 @@
                 this.elephantSex = data.elephant.sex
                 this.note = data.elephant.note
             })
-                //  return this.elephants
             }
         },
         created () {
