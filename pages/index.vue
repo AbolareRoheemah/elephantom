@@ -35,7 +35,6 @@
       return {
       tableHead: ['S/N', 'Name', 'Species', 'Sex', 'Affliation', 'Dob'],
       elephants: '',
-      id: 'dood'
       }
     },
     methods: {

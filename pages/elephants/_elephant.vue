@@ -12,7 +12,7 @@
 <script>
     export default {
         data() {
-            return {
+            return { 
                 elephantName: '',
                 elephantSex: '',
                 note: '',
