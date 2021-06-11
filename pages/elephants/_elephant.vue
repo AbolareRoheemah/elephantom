@@ -22,7 +22,7 @@
         methods: {
             getElephants() {
             let baseUrl = 'https://elephantapimary3.herokuapp.com'
-            let id = this.elephant
+            let id = this.$route.params.elephant
             fetch(baseUrl + '/elephants/id/' + id)
             .then(res => res.json())
             .then((data) => {
@@ -30,6 +30,7 @@
                 this.elephantName = name.charAt(0).toUpperCase() + name.slice(1)
                 this.elephantSex = data.elephant.sex
                 this.note = data.elephant.note
+                console.log(id)
             })
             }
         },
